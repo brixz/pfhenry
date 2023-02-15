@@ -2,16 +2,16 @@ import "./product.css";
 import React, { Component } from "react";
 import Logo from "../../Components/1-Logo/Logo2";
 import Nav from "../../Components/2-Nav/Nav";
-import MenuHamburguesaFilter from "../../Components/8-Sort&Filter/MenuHamburguesaFilter";
+import BurgerMenu from "../../Components/11-BurgerMenu/1-BurgerMenuProductFilter/BurgerMenuProductFilter";
 
 export default class Products extends Component {
     render(){
         return(
-            <div className="Home">
+            <div className="Products">
                 <div>
                     <Logo/>
                     <Nav/>
-                    <MenuHamburguesaFilter/>
+                    <BurgerMenu/>
                 </div>
             </div>
         )
