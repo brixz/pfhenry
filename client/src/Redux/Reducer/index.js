@@ -10,17 +10,19 @@ const rootReducer = (state = initialState, action) => {
         case actions.GET_ALL_PRODUCTS:
         return {
             ...state,
-            products: actions.payload.products,
+            products: action.payload.products,
             productDetail: {},
         }
         case actions.GET_PRODUCTS_DETAIL: return{
             ...state,
             products: [],
-            productDetail: actions.payload,
+            productDetail: action.payload,
         }
         case actions.CREATE_PRODUCT: return {
-            products: [...state.products, actions.payload],
+            products: [...state.products, action.payload],
             productDetail: {},
         }
     }
 }
+
+export default rootReducer;

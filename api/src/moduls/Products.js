@@ -14,7 +14,7 @@ const Product = (sequelize) => {
         },
         quantity: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            //allowNull: false
         },
         description: {
             type: DataTypes.TEXT
@@ -24,7 +24,7 @@ const Product = (sequelize) => {
         },
         price: {
             type: DataTypes.DECIMAL(6, 2), // hasta un maximo de 9999.99
-            allowNull: false
+            //allowNull: false
         },
         rating: {
             type: DataTypes.DECIMAL(3, 2),
