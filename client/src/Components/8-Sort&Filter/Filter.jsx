@@ -1,4 +1,4 @@
-import "./sort.css";
+import "./filter.css";
 import React, { Component } from "react";
 
 export default class Filter extends Component {
@@ -9,9 +9,49 @@ export default class Filter extends Component {
         return (
 
             <div className="Filter">
-                <form>
-            
-                </form>
+                <ul className="FilterUl">
+                    <li>
+                        <label>
+                            Animales
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            Bizcocho Ceramico
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            Cemento
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            Colgantes
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            Fridas & Babies
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            Otros
+                            <input type="checkbox" />
+                        </label>
+                    </li>
+                </ul>
             </div>
         )
 

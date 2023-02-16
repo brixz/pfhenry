@@ -16,7 +16,7 @@
 }
 
 .link:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);
 }
 
 .link-P{
@@ -27,7 +27,7 @@
 }
 
 .link-P:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);
 }
 
 .flecha{
@@ -42,7 +42,7 @@
 }
 
 .flecha:hover{
-    color: rgb(184, 162, 170);   
+    color: rgb(103, 103, 103);   
 }
 
 .link-P ul{
@@ -53,14 +53,14 @@
 
 .All-Products{
     position: absolute;
-    background-color: rgb(253, 234, 241);
+    background-color: rgb(246, 246, 246);
     list-style: none;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;;
+    text-align: left;
     left: 2%;
     right: 0;
-    top:41.6%;
+    top:40%;
     z-index: 10;
     opacity: 0;
     visibility: hidden;
@@ -87,7 +87,7 @@
 }
 
 .navLinkAnimales:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);;
 }
 
 .navLinkBizcocho{
@@ -100,7 +100,7 @@
 }
 
 .navLinkBizcocho:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);;
 }
 
 .navLinkCemento{
@@ -113,7 +113,7 @@
 }
 
 .navLinkCemento:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);;
 }
 
 .navLinkColgante{
@@ -126,7 +126,7 @@
 }
 
 .navLinkColgante:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);
 }
 
 .navLinkFridas{
@@ -139,7 +139,7 @@
 }
 
 .navLinkFridas:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);
 }
 
 .navLinkOtros{
@@ -152,5 +152,5 @@
 }
 
 .navLinkOtros:hover{
-    color: rgb(184, 162, 170);
+    color: rgb(103, 103, 103);
 }
