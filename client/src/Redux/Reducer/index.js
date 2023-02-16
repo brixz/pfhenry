@@ -10,7 +10,7 @@ const rootReducer = (state = initialState, action) => {
         case actions.GET_ALL_PRODUCTS:
         return {
             ...state,
-            products: action.payload.products,
+            products: action.payload,
             productDetail: {},
         }
         case actions.GET_PRODUCTS_DETAIL: return{
@@ -22,6 +22,12 @@ const rootReducer = (state = initialState, action) => {
             products: [...state.products, action.payload],
             productDetail: {},
         }
+
+        case actions.DELETE_PRODUCT: return {
+            products: state.products.filter((item) => item.id !== action.payload),
+            productDetail: {},
+        }
+        default: return state;
     }
 }
 

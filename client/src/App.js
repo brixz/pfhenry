@@ -5,6 +5,7 @@ import Home from './Pages/1-Home/Home';
 import Products from './Pages/2-Product/Product';
 import ProductDetail from './Pages/3-ProductDetail/ProductDetail';
 
+import CreateProduct from './Components/7-CreateProduct/CreateProduct';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/products" exact component={Products}/>
 
         <Route path="/details" exact component={ProductDetail}/>
+
+        <Route path="/create" exact component={CreateProduct}/>
       
       </Router>
     </div>

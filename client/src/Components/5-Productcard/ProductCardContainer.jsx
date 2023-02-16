@@ -7,11 +7,15 @@ import ProductCard from "./ProductCard/ProductCard";
 class ProductCardContainer extends Component {
 
     componentDidMount() {
-        this.props.getAllProducts();
+        this.props.getAllProducts()
     }
 
     render(){
         
+        let products=[]
+        products = this.props.products
+
+        console.log(this.props)
 
         return(
             <div>
@@ -21,9 +25,16 @@ class ProductCardContainer extends Component {
                             <ProductCard
                                 id={product.id}
                                 name={product.name}
+                                quantity={product.quantity} 
+                                description={product.descripton}
+                                image={product.image}
+                                price={product.price}
+                                rating={product.rating}
                             />
+                            
                         </div>
                     })}
+                    
                 </div>
             </div>
         )
@@ -32,7 +43,7 @@ class ProductCardContainer extends Component {
 
 export const mapStateToProps = (state) => {
     return {
-        products: state.products,
+        products: state.products
     }
 };
 
@@ -40,6 +51,6 @@ export const mapDispatchToProps = (dispatch) => {
     return {
         getAllProducts: () => dispatch(actions.getAllProducts())
     }
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCardContainer);

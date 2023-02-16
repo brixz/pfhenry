@@ -1,7 +1,12 @@
 import "./createproduct.css";
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../Redux/actions/index";
 
-export default class CreateProduct extends Component{
+class CreateProduct extends Component{
+
+    
+
     render() {
         return(
             <div>
@@ -117,4 +122,6 @@ export default class CreateProduct extends Component{
             </div>
         )
     }
-}
+};
+
+export default connect(CreateProduct)

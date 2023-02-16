@@ -12,7 +12,8 @@ export default class Products extends Component {
                 <div>
                     <Logo/>
                     <Nav/>
-                    <BurgerMenu/>                
+                    <BurgerMenu/> 
+                    <ProductCardContainer/>               
                 </div>
             </div>
         )

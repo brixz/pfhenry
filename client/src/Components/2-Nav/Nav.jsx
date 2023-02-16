@@ -8,7 +8,7 @@ export default class Nav extends Component {
             <div className="nav">
                 <Link className="link" to="/">Inicio</Link>
                 <Link className="link">Nosotras</Link>
-                <Link to="/Products" className="link-P">
+                <Link to="/products" className="link-P">
                     Productos   
                     <p className="flecha">▼</p>
                     <ul className="All-Products">
