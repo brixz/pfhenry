@@ -18,8 +18,8 @@ class ProductCardContainer extends Component {
         console.log(this.props)
 
         return(
-            <div>
-                <div>
+            <div className="ProductCard-Container">
+                <div className="ProductCard-Home">
                     {this.props.products?.map((product) => {
                         return <div key={product.id}>
                             <ProductCard

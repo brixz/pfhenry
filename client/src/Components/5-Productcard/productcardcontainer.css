@@ -1,0 +1,12 @@
+.ProductCard-Container{
+    background-color: rgb(246, 246, 246);
+}
+.ProductCard-Home{
+    background-color: white;
+    margin-left: 21%;
+    margin-right: 0%;
+    display: grid;
+    grid-template-columns: repeat(3, 0.4fr);
+    grid-gap:0px; 
+    padding-bottom: 4.3%;
+}

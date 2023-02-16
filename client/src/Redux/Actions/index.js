@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
-export const GET_PRODUCTS_DETAIL = "GET_PRODCUTS_DETAIL";
+export const GET_PRODUCTS_DETAIL = "GET_PRODUCTS_DETAIL";
 export const CREATE_PRODUCT = "CREATE_PRODUCT";
 export const DELETE_PRODUCT = "DELETE_PRODUCT"
 
@@ -18,7 +18,7 @@ export const getAllProducts = () => {
     }
 };
 
-export const getProdcutDetail = (id) => {
+export const getProductDetail = (id) => {
     return (dispatch) => {
         return axios.get(`${MY_API}/products/${id}`)
             .then(res => dispatch({ 

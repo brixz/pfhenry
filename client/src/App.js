@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from './Pages/1-Home/Home';
 import Products from './Pages/2-Product/Product';
-import ProductDetail from './Pages/3-ProductDetail/ProductDetail';
+import ProductDetailCard from './Pages/3-Detail/ProductDetailCard';
 
 import CreateProduct from './Components/7-CreateProduct/CreateProduct';
 
@@ -16,7 +16,7 @@ function App() {
 
         <Route path="/products" exact component={Products}/>
 
-        <Route path="/details" exact component={ProductDetail}/>
+        <Route path="/products/:id" exact component={ProductDetailCard}/>
 
         <Route path="/create" exact component={CreateProduct}/>
       
