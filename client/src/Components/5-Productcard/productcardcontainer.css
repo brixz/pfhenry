@@ -8,6 +8,6 @@
     padding-top:5%;
     display: grid;
     grid-template-columns: repeat(3, 0.4fr);
-    grid-gap:0px; 
+    grid-gap: 2%; 
     padding-bottom: 4.3%;
 }

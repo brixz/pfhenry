@@ -7,7 +7,7 @@ export default class Nav extends Component {
         return (
             <div className="nav">
                 <Link className="link" to="/">Inicio</Link>
-                <Link className="link">Nosotras</Link>
+                <Link to="" className="link">Nosotras</Link>
                 <Link to="/products" className="link-P">
                     Productos   
                     <p className="flecha">▼</p>
@@ -32,8 +32,9 @@ export default class Nav extends Component {
                         </li>
                     </ul>
                 </Link>
-                <Link className="link">Ofertas</Link>
-                <Link className="link">Contacto</Link>
+                <Link to="" className="link">Ofertas</Link>
+                <Link to="" className="link">Contacto</Link>
+                <Link  to="/product/create" className="link">Create</Link>
             </div>
         )
     }

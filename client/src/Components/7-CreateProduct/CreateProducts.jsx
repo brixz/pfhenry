@@ -77,165 +77,173 @@ const CreateProduct = () => {
     //}
 
     return(
-        <div>
+        <div className="Create-Component">
            <form onSubmit={enviarDatos}>
                 
                 <h4>Crear Producto</h4>
                 
                 <div className="createContainer">
-                    
-                    <label id="src-file">
-                        Image:  
-                        <input
-                            placeholder="Paste URL Image"
-                            className="ImageInput"
-                            type="file"
-                            name="image"
-                            onChange={handleChange}
-                        />
+                    <ul>
+                        <li>
+                            <label className="ImageLabel" id="src-file">
+                                Image:  
+                                <input
+                                    placeholder="Paste URL Image"
+                                    className="ImageInput"
+                                    type="file"
+                                    name="image"
+                                    onChange={handleChange}
+                                />
 
-                        <img
-                            className="CreateImg"
-                            type="image"
-                            src={file}
-                        />
-                    </label>
+                                <img
+                                    className="CreateImg"
+                                    type="image"
+                                    src={file}
+                                />
+                            </label>
+                        </li>
 
-                    <label>
-                        Name (4-16):
-                        <input
-                            className='name'
-                            type="text"
-                            name="name"
-                            onChange={handleInputChange}
-                            required={true}
-                            minLength="4"
-                            maxLength="30"
-                        />
-                        
-                    </label>
+                        <li>
+                            <label className="nameLabel">
+                                Name (4-30):
+                                <input
+                                    className='nameInput'
+                                    type="text"
+                                    name="name"
+                                    onChange={handleInputChange}
+                                    required={true}
+                                    minLength="4"
+                                    maxLength="30"
+                                />
+                            </label>
+                        </li>
 
-                    <div>
-                        <label htmlFor="">
-                            Categoria:
-                        </label>
+                        <li>
+                            <div className="CategoriaContainer">
+                                <label className="categoriaLabel" htmlFor="">
+                                    Categoria:
+                                </label>
                 
-                        <ul>
-                            <li>
-                                <label htmlFor="">
-                                    Animales
-                                    <input 
-                                        name="type"
-                                        type="checkbox"
-                                        value="animales"
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
+                                <div className="AllCategoriesContainer">
+                            
+                                    <label htmlFor="">
+                                        Animales
+                                        <input 
+                                            name="type"
+                                            type="checkbox"
+                                            value="animales"
+                                            onChange={handleCheckChange} />
+                                    </label>
+                            
+                                    <label>
+                                        Bizcocho Ceramico
+                                        <input 
+                                            name="type"
+                                            type="checkbox"value="bizcochoceramico" 
+                                            onChange={handleCheckChange} />
+                                    </label>
+                            
+                                    <label>
+                                        Cemento
+                                        <input
+                                            name="type" 
+                                            type="checkbox"value="cemento"
+                                            onChange={handleCheckChange} />
+                                    </label>
+                            
+                                    <label>
+                                        Colgantes
+                                        <input 
+                                            name="type"
+                                            type="checkbox"value="colgantes" 
+                                            onChange={handleCheckChange} />
+                                    </label>
+                           
+                                    <label>
+                                        Fridas & Babies
+                                        <input
+                                            name="type"
+                                            type="checkbox"
+                                            value="fridas&baby" 
+                                            onChange={handleCheckChange} />
+                                    </label>
+                           
+                                    <label>
+                                        Otros
+                                        <input
+                                            name="type" 
+                                            type="checkbox"
+                                            value="otros" 
+                                            onChange={handleCheckChange} />
+                                    </label>
 
-                            <li>
-                                <label>
-                                    Bizcocho Ceramico
-                                    <input 
-                                        name="type"
-                                        type="checkbox"value="bizcochoceramico" 
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
+                                </div>  
+                            </div>
+                        </li>
 
-                            <li>
-                                <label>
-                                    Cemento
-                                    <input
-                                        name="type" 
-                                        type="checkbox"value="cemento"
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
+                        <li>                        
+                            <label className="quantityLabel">
+                                Quantity(1-50): 
+                                <input
+                                    className="quantityInput"
+                                    type="number"
+                                    name="quantity"
+                                    required={true}
+                                    min="1"
+                                    max="50"
+                                    onChange={handleInputChange}
+                                />
+                            </label>
+                        </li>
 
-                            <li>
-                                <label>
-                                    Colgantes
-                                    <input 
-                                        name="type"
-                                        type="checkbox"value="colgantes" 
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
-
-                            <li>
-                                <label>
-                                    Fridas & Babies
-                                    <input
-                                        name="type"
-                                        type="checkbox"
-                                        value="fridas&baby" 
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
-
-                            <li>
-                                <label>
-                                    Otros
-                                    <input
-                                        name="type" 
-                                        type="checkbox"
-                                        value="otros" 
-                                        onChange={handleCheckChange} />
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <label className="descriptionLabel">
+                                Description:
+                                <input
+                                    className='descriptionInput'
+                                    type="text"
+                                    name="description"
+                                    required={true}
+                                    minLength="4"
+                                    maxLength="300"
+                                    onChange={handleInputChange}
+                                />
+                            </label>
+                        </li>
+                        <li>
+                            <label className="priceLabel">
+                                Price: 
+                                <input
+                                    className="priceInput"
+                                    type="number"
+                                    required={true}
+                                    name="price"
+                                    onChange={handleInputChange}
+                                />
+                            </label>
+                        </li>    
                         
-                    <label>
-                        Quantity(1-50): 
-                        <input
-                            type="number"
-                            name="quantity"
-                            required={true}
-                            min="1"
-                            max="50"
-                            onChange={handleInputChange}
-                            />
-                    </label>
-
-                    <label className="NameLabel">
-                        Description:
-                        <input
-                        className='description'
-                        type="text"
-                        name="description"
-                        required={true}
-                        minLength="4"
-                        maxLength="300"
-                        onChange={handleInputChange}
-                             />
-                    </label>
-
-                    <label>
-                        Price: 
-                        <input
-                            type="number"
-                            required={true}
-                            name="price"
-                            onChange={handleInputChange}
-                        />
-                    </label>
-
-                    <label>
-                        Rating: 
-                        <input
-                            type="number"
-                            required={true}
-                            min="1"
-                            name="rating"
-                            onChange={handleInputChange}
-                        />
-                    </label>
-
+                        <li>
+                            <label className="ratingLabel">
+                                Rating(1-5): 
+                                <input
+                                    className="ratingInput"
+                                    type="number"
+                                    required={true}
+                                    min="1"
+                                    max="5"
+                                    name="rating"
+                                    onChange={handleInputChange}
+                                />
+                            </label>
+                        </li>
+                    </ul>
+                    
                     <button //disabled={isFieldCompleted()}
                      className="button-create" type="submit">
                         Create Product
                     </button>
+                    
                 </div>
             </form> 
         </div>

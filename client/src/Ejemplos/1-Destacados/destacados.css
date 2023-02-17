@@ -1,0 +1,12 @@
+.productContainer{
+    background-color: rgb(255, 255, 255);
+    height: 62vh;
+    width: 20vw;
+    padding: 1%;
+    padding-top: 3%;
+}
+
+.productContainer img{
+    width: 19vw;
+    height: 45vh;
+}
