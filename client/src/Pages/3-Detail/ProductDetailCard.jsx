@@ -41,7 +41,7 @@ class ProductDetailCard extends Component {
                             <p className="macetacardPrice">${product.price}</p>
                             <p className="descriptionMacetacard">{product.description}</p>
                             <p><img className="starIcon" src={ star } alt=""/>{product.rating}</p>
-                            <p>cant.{product.quantity}</p>
+                            <p>Stock: {product.quantity}</p>
                             <button className='macetacardCarrito'>agregar al carrito</button>
 
                         </div>   

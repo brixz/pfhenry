@@ -86,15 +86,15 @@ const CreateProduct = () => {
                     <ul>
                         <li>
                             <label className="ImageLabel" id="src-file">
-                                Image:  
-                                <input
-                                    placeholder="Paste URL Image"
-                                    className="ImageInput"
-                                    type="file"
-                                    name="image"
-                                    onChange={handleChange}
-                                />
-
+                                <div className="div-file"> 
+                                    <p className="Archivo">Add Image</p>
+                                    <input
+                                        className="ImageInput"
+                                        type="file"
+                                        name="image"
+                                        onChange={handleChange}
+                                    />
+                                </div>
                                 <img
                                     className="CreateImg"
                                     type="image"
