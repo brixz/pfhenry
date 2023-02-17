@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../Redux/actions/index";
 import ProductCard from "./ProductCard/ProductCard";
+import Loading from "../6-Loading/Loading";
 
 class ProductCardContainer extends Component {
 
@@ -19,22 +20,23 @@ class ProductCardContainer extends Component {
 
         return(
             <div className="ProductCard-Container">
-                <div className="ProductCard-Home">
-                    {this.props.products?.map((product) => {
-                        return <div key={product.id}>
-                            <ProductCard
-                                id={product.id}
-                                name={product.name}
-                                quantity={product.quantity} 
-                                description={product.descripton}
-                                image={product.image}
-                                price={product.price}
-                                rating={product.rating}
-                            />
+                <div>
+                    <div className="ProductCard-Home">
+                        {(this.props.products.length === 0) ? <Loading/>  : this.props.products?.map((product) => {
+                            return <div key={product.id}>
+                                <ProductCard
+                                    id={product.id}
+                                    name={product.name}
+                                    quantity={product.quantity} 
+                                    description={product.descripton}
+                                    image={product.image}
+                                    price={product.price}
+                                    rating={product.rating}
+                                />
                             
-                        </div>
-                    })}
-                    
+                            </div>
+                        })}
+                    </div>
                 </div>
             </div>
         )

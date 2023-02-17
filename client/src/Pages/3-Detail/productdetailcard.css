@@ -58,6 +58,10 @@
     font-size: 17px;
 }
 
+.starIcon{
+    width: 1.2vw;
+}
+
 .macetacardCarrito{
     background-color: pink;
     border: none;

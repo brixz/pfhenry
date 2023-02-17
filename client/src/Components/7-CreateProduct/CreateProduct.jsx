@@ -5,12 +5,69 @@ import * as actions from "../../Redux/actions/index";
 
 class CreateProduct extends Component{
 
-    
+    constructor(props){
+        super(props)
+        this.state = {
+            input: {
+                name: "",
+                image:"",
+                quantity: 0,
+                description: "",
+                price:0,
+                type:""
+            },
+        }
+
+        this.enviarDatos = this.enviarDatos.bind(this)
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.isFieldCompleted = this.isFieldCompleted.bind(this)
+    }
+
+    enviarDatos(e) {
+        const { input } = this.state
+        let data = {
+            name: input.name,
+            image: input.image,
+            quantity: input.quantity,
+            description: input.description,
+            price: input.price,
+        }
+
+        e.preventDefault();
+        // handleSubmit();
+        console.log(data)
+        this.props.createProduct(data)
+    }
+
+    handleInputChange(e) {
+        const { input } = this.state
+        let newInput = input
+        const key = e.target.name
+        const value = e.target.value
+
+        newInput[key] = value
+        this.setState({
+            ...this.state,
+            input: newInput
+        })
+    }
+
+    handleChange(e) {
+        console.log(e.target.files);
+    }
+
+    isFieldCompleted() {
+        const { input } = this.state
+        return (input.name === "" &&
+                input.price === 0 &&
+                input.quantity === 0) ? true : false
+    }
 
     render() {
         return(
             <div>
-                <form>
+                <form onSubmit={this.enviarDatos}>
                     <h4>Crear Producto</h4>
                     <div className="createContainer">
                         <label id="src-file">
@@ -19,6 +76,8 @@ class CreateProduct extends Component{
                                         className="ImageInput"
                                         type="text"
                                         name="image"
+                                        value={this.state.input.image}
+                                        onChange={this.handleChange}
                                     />
                         </label>
 
@@ -27,6 +86,7 @@ class CreateProduct extends Component{
                                     className='name'
                                     type="text"
                                     name="name"
+                                    onChange={this.handleInputChange}
                                     required={true}
                                     minLength="4"
                                     maxLength="16"
@@ -39,42 +99,59 @@ class CreateProduct extends Component{
                                 <li>
                                     <label>
                                         Animales
-                                        <input type="checkbox" />
+                                        <input 
+                                        name="type"
+                                        type="checkbox"
+                                        onChange={this.handleChange} />
                                     </label>
                                 </li>
 
                                 <li>
                                     <label>
                                         Bizcocho Ceramico
-                                        <input type="checkbox" />
+                                        <input 
+                                        name="type"
+                                        type="checkbox" 
+                                        onChange={this.handleChange}/>
                                     </label>
                                 </li>
 
                                 <li>
                                     <label>
                                         Cemento
-                                        <input type="checkbox" />
+                                        <input
+                                        name="type" 
+                                        type="checkbox" 
+                                        onChange={this.handleChange}/>
                                     </label>
                                 </li>
 
                                 <li>
                                     <label>
                                         Colgantes
-                                        <input type="checkbox" />
+                                        <input 
+                                        name="type"
+                                        type="checkbox" 
+                                        onChange={this.handleChange}/>
                                     </label>
                                 </li>
 
                                 <li>
                                     <label>
                                         Fridas & Babies
-                                        <input type="checkbox" />
+                                        <input
+                                        name="type"
+                                         type="checkbox" 
+                                        onChange={this.handleChange}/>
                                     </label>
                                 </li>
 
                                 <li>
                                     <label>
                                         Otros
-                                        <input type="checkbox" />
+                                        <input
+                                        name="type" type="checkbox" 
+                                        onChange={this.handleChange}/>
                                     </label>
                                 </li>
                             </ul>
@@ -87,6 +164,7 @@ class CreateProduct extends Component{
                                     required={true}
                                     min="1"
                                     max="50"
+                                    onChange={this.handleChange}
                                 />
                         </label>
 
@@ -98,6 +176,7 @@ class CreateProduct extends Component{
                                     required={true}
                                     minLength="4"
                                     maxLength="16"
+                                    onChange={this.handleChange}
                                 />
                         </label>
 
@@ -105,7 +184,8 @@ class CreateProduct extends Component{
                                 Price: <input
                                     type="number"
                                     required={true}
-                                    min="1"
+                                    name="price"
+                                    onChange={this.handleChange}
                                 />
                         </label>
 
@@ -114,9 +194,14 @@ class CreateProduct extends Component{
                                     type="number"
                                     required={true}
                                     min="1"
+                                    name="rating"
+                                    onChange={this.handleChange}
                                 />
                         </label>
 
+                        <button disabled={this.isFieldCompleted()} className="button-create" type="submit">
+                            Create Dog
+                        </button>
                     </div>
                 </form>
             </div>
@@ -124,4 +209,11 @@ class CreateProduct extends Component{
     }
 };
 
-export default connect(CreateProduct)
+export const mapDispatchToProps = (dispatch) => {
+    return {
+        createProduct: (product) => dispatch(actions.createProduct(product))
+    }
+};
+
+
+export default connect (mapDispatchToProps)(CreateProduct)

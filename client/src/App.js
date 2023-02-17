@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from './Pages/1-Home/Home';
 import Products from './Pages/2-Product/Product';
-import ProductDetailCard from './Pages/3-Detail/ProductDetailCard';
-
+import ProductDetailCard from './Pages/3-Detail/ProductDetailCard'
 import CreateProduct from './Components/7-CreateProduct/CreateProduct';
+
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
 
         <Route path="/products/:id" exact component={ProductDetailCard}/>
 
-        <Route path="/create" exact component={CreateProduct}/>
-      
+        <Route path="/product/create" exact component={CreateProduct}/>
+    
       </Router>
     </div>
   );

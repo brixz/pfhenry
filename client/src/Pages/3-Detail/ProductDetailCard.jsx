@@ -4,6 +4,7 @@ import * as actions from "../../Redux/actions/index";
 import { connect } from 'react-redux';
 import Logo2 from "../../Components/1-Logo/Logo2";
 import Nav from "../../Components/2-Nav/Nav";
+import star from "../../Images/Staricon.png"
 
 
 class ProductDetailCard extends Component {
@@ -39,8 +40,8 @@ class ProductDetailCard extends Component {
                             <p className="macetacardName">{product.name}</p>
                             <p className="macetacardPrice">${product.price}</p>
                             <p className="descriptionMacetacard">{product.description}</p>
-                            <p>{product.rating}</p>
-                            <p>{product.quantity}</p>
+                            <p><img className="starIcon" src={ star } alt=""/>{product.rating}</p>
+                            <p>cant.{product.quantity}</p>
                             <button className='macetacardCarrito'>agregar al carrito</button>
 
                         </div>   
