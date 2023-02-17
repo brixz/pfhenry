@@ -34,6 +34,7 @@ export default class Nav extends Component {
                 </Link>
                 <Link className="link">Ofertas</Link>
                 <Link className="link">Contacto</Link>
+                <Link className="link" to='/login'> Login Account</Link>
             </div>
         )
     }
