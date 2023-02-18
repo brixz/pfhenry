@@ -1,6 +1,6 @@
 import "./videohome.css";
 import React, { Component } from "react";
-import Video from "../../Video/bonitavideoprincipal.mp4"
+import Video from "../../Video/bonitavideoprincipal2.mp4"
 
 
 export default class VideoHome extends Component {

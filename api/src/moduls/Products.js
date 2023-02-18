@@ -14,17 +14,17 @@ const Product = (sequelize) => {
         },
         quantity: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            //allowNull: false
         },
         description: {
             type: DataTypes.TEXT
         },
         image: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(400),
         },
         price: {
             type: DataTypes.DECIMAL(6, 2), // hasta un maximo de 9999.99
-            allowNull: false
+            //allowNull: false
         },
         rating: {
             type: DataTypes.DECIMAL(3, 2),

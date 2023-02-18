@@ -1,36 +1,38 @@
-.nav{
+.nav2{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     margin-top: 0%;
     padding-top: .4%;
+    padding-bottom: .4%;
     border-top: solid rgb(191, 191, 191) 1px;
+    border-bottom: solid rgb(191, 191, 191) 1px;
     
 }
 
-.link { 
+.link2 { 
     text-decoration: none; 
     color: rgb(125, 125, 125);
     font-weight: bold;
     padding: 20px 40px;
 }
 
-.link:hover{
+.link2:hover{
     color: rgb(103, 103, 103);
 }
 
-.link-P{
+.link-P2{
     text-decoration: none; 
     color: rgb(125, 125, 125);
     font-weight: bold;
     padding: 20px 40px;
 }
 
-.link-P:hover{
+.link-P2:hover{
     color: rgb(103, 103, 103);
 }
 
-.flecha{
+.flecha2{
     width: 10.3vw;
     position: absolute;
     margin-top: -1.5%;
@@ -41,17 +43,17 @@
     text-align: right;
 }
 
-.flecha:hover{
+.flecha2:hover{
     color: rgb(103, 103, 103);   
 }
 
-.link-P ul{
+.link-P2 ul{
     height: 26vh;
     width: 11vw;
     
 }
 
-.All-Products{
+.All-Products2{
     position: absolute;
     background-color: rgb(246, 246, 246);
     list-style: none;
@@ -67,17 +69,17 @@
     padding-bottom: 1%;
 }
 
-.link-P:hover .All-Products{
+.link-P2:hover .All-Products2{
         opacity: 1;
         visibility: visible;
 }
 
-.All-Products li{
+.All-Products2 li{
     margin-bottom: 5%;
     margin-top: 5%;
 }
 
-.navLinkAnimales{
+.navLinkAnimales2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0%;
@@ -86,11 +88,11 @@
     margin-left: -16%;
 }
 
-.navLinkAnimales:hover{
+.navLinkAnimales2:hover{
     color: rgb(103, 103, 103);;
 }
 
-.navLinkBizcocho{
+.navLinkBizcocho2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0;
@@ -99,11 +101,11 @@
     margin-left: -16%;
 }
 
-.navLinkBizcocho:hover{
+.navLinkBizcocho2:hover{
     color: rgb(103, 103, 103);;
 }
 
-.navLinkCemento{
+.navLinkCemento2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0;
@@ -112,11 +114,11 @@
     margin-left: -16%;
 }
 
-.navLinkCemento:hover{
+.navLinkCemento2:hover{
     color: rgb(103, 103, 103);;
 }
 
-.navLinkColgante{
+.navLinkColgante2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0;
@@ -125,11 +127,11 @@
     margin-left: -16%;
 }
 
-.navLinkColgante:hover{
+.navLinkColgante2:hover{
     color: rgb(103, 103, 103);
 }
 
-.navLinkFridas{
+.navLinkFridas2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0;
@@ -138,11 +140,11 @@
     margin-left: -16%;
 }
 
-.navLinkFridas:hover{
+.navLinkFridas2:hover{
     color: rgb(103, 103, 103);
 }
 
-.navLinkOtros{
+.navLinkOtros2{
     color: rgb(125, 125, 125);
     text-decoration: none;
     padding: 2% 0;
@@ -151,6 +153,6 @@
     margin-left: -16%;
 }
 
-.navLinkOtros:hover{
+.navLinkOtros2:hover{
     color: rgb(103, 103, 103);
 }
