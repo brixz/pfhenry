@@ -1,7 +1,7 @@
-require('dotenv').config();
+require("dotenv").config()
 const server = require('./src/app.js');
 const { sequelize } = require('./src/db.js');
-const port = process.env.PORT || 3001;
+const port = process.env.PORT||3001
 
 server.listen("3001", async () => {
     try {

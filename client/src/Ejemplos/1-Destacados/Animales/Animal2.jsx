@@ -1,7 +1,7 @@
 import '../destacados.css';
 import React from 'react';
 import { Link } from "react-router-dom";
-import Img from '../../../Images/Animales/elefante1.jpeg'
+import Img from '../../../Images/Animales/elefantes1.webp';
 
 export default function Animal2() {
 

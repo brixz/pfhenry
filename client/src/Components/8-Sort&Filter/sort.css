@@ -1,6 +1,7 @@
 .sort{
     z-index: 5;
     list-style: none;
+    
 }
 
 
@@ -14,6 +15,7 @@
     font-size: 14px;
     border: none;
    margin-bottom: 10%;
+   color: rgb(99, 99, 99)
 }
 
 .sort button:hover{
