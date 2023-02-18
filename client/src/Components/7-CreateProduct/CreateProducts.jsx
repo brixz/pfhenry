@@ -41,6 +41,7 @@ const CreateProduct = () => {
     const enviarDatos = (e) => {
         e.preventDefault();
         handleSubmit();
+        alert("Product Create Successfully")
     }
 
     const [ file, setFile ] = useState([]);
