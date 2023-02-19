@@ -1,11 +1,5 @@
-.AllProducts{
-    height: 62vh;
-    width: 20vw;
-    padding: 1%;
-}
-
 .productContainer{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 62vh;
     width: 20vw;
     padding: 1%;
@@ -15,21 +9,4 @@
 .productContainer img{
     width: 19vw;
     height: 45vh;
-}
-
-.productName{
-    margin-top: 0%;
-    font-size: 22px;
-}
-
-.productPrice{
-    margin-top: -8%;
-}
-
-.productCarrito{
-    background-color: pink;
-    border: none;
-    padding: 4%;
-    border-radius: 20px;
-    margin-top: -5%;
 }

@@ -7,8 +7,8 @@ export default class Nav extends Component {
         return (
             <div className="nav">
                 <Link className="link" to="/">Inicio</Link>
-                <Link className="link">Nosotras</Link>
-                <Link to="/Products" className="link-P">
+                <Link to="" className="link">Nosotras</Link>
+                <Link to="/products" className="link-P">
                     Productos   
                     <p className="flecha">▼</p>
                     <ul className="All-Products">
@@ -32,9 +32,15 @@ export default class Nav extends Component {
                         </li>
                     </ul>
                 </Link>
+<<<<<<< HEAD
                 <Link className="link">Ofertas</Link>
                 <Link className="link">Contacto</Link>
                 <Link className="link" to='/login'> Login Account</Link>
+=======
+                <Link to="" className="link">Ofertas</Link>
+                <Link to="" className="link">Contacto</Link>
+                <Link  to="/product/create" className="link">Create</Link>
+>>>>>>> 3a1b1cb346635ad7dd18b97022f7fc668e71a118
             </div>
         )
     }

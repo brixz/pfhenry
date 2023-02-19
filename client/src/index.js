@@ -4,15 +4,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from "./Redux/store/index";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Auth0Provider domain='dev-ee4how47xvioitys.us.auth0.com'clientId='D1xo2z3qXut2PkakkosAdg6SximGZpbr' redirectUri={window.location.origin}>
+    <Provider store={store}>
       <App/>
-    </Auth0Provider>
-    </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
